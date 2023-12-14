@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1em;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 100%;
+    background-color: rgb(225 225 198 / 18%);
+}
+
+
+
+h1 {
+    font-size: 1.8rem;
+}
+
+form {
+    font-size: 0.8rem;
+
+}
+
+.personal-greeting {
+    font-weight: bold;
+}
+
+/* Main layout */
+
+.grid-container {
+    display: grid;
+    gap: 1vw;
+    grid-template-areas:
+        "hd"
+        "main";
+    text-align: center;
+}
+
+
+main {
+    grid-area: main;
+    background-color: rgb(225 225 198 / 18%);
+}
+
+header {
+    grid-area: hd;
+    background: rgb(190 150 187);
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+
+
+
+.pop-up-div {
+    background-color: rgb(190 150 187);
+    position: absolute;
+    top: 100px;
+    right: 2px;
+    border-radius: 5px;
+    transition: all 5s ease-in-out;
+    margin: 0 10px;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    opacity: 1;
+
+}
+
+button {
+    color: rgb(190 150 187);
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 50vw;
+}
+
+button:hover,
+#submitname:hover,
+.change-choice-div button:hover {
+    background-color: rgb(190 150 187);
+    color: white;
+}
+
+.pop-up-div p {
+    color: white;
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px;
+}
+
+.remember {
+    display: none;
+}
+
+.forget {
+    display: none;
+}
+
+
+.change-choice-div {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.change-choice-div p {
+    font-size: 0.8rem;
+}
+
+#submitname,
+.change-choice-div button {
+    color: white;
+    background-color: rgb(190 150 187);
+    font-size: 0.5rem;
+    padding: 1px;
+    margin-top: 2px;
+    width: 20vw;
+
+}
+
